@@ -1,0 +1,9 @@
+h2 Log in
+form(ng-submit='post()')
+  .form-group
+    label(for='username') Username
+    input#username.form-control(ng-model='form.username', type='text', required='')
+  .form-group
+    label(for='password') Password
+    input#password.form-control(ng-model='form.password',type='password', required='')
+  button.btn.btn-default(type='submit') Log in

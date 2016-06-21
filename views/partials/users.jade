@@ -1,0 +1,17 @@
+h4 {{users.length}} users
+
+table.table
+  thead
+    tr
+      th Username
+      th Email
+      th 
+      th
+  tbody
+    tr(ng-repeat='user in users')
+      td {{user.username}}
+      td {{user.email}}
+      td 
+        a.btn.btn-primary(href="#/user/{{user.username}}") More
+      td 
+        a.btn.btn-primary(href="#/delete/{{user.username}}") Delete

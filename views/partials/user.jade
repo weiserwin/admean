@@ -1,0 +1,58 @@
+style.
+  body{padding-top:30px;}
+
+  .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+  small {
+  display: block;
+  line-height: 1.428571429;
+  color: #999;
+  }
+  
+  .btn-danger{
+    margin-left : 10px;
+  }
+
+div.container-fluid
+    .row
+      .col-xs-12.col-sm-6.col-md-6
+        .well.well-sm
+          .row
+            .col-sm-6.col-md-4
+              img.img-rounded.img-responsive(src='http://placehold.it/380x500', alt='')
+            .col-sm-6.col-md-8
+              h4
+                | {{user[0].username}}
+              small
+                cite(title='San Francisco, USA')
+                  | San Francisco, USA 
+                  i.glyphicon.glyphicon-map-marker
+              p
+                i.glyphicon.glyphicon-envelope
+                | {{user[0].email}}
+                br
+                i.glyphicon.glyphicon-globe
+                a(href='http://www.jquery2dotnet.com') www.{{user[0].username}}.com
+                br
+                i.glyphicon.glyphicon-gift
+                | June 02, 1988
+              // Split button
+              .btn-group
+                button.btn.btn-primary(type='button')
+                  | Social
+                button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+                  span.caret
+                  span.sr-only Social
+                ul.dropdown-menu(role='menu')
+                  li
+                    a(href='#') Twitter
+                  li
+                    a(href='https://plus.google.com/+Jquery2dotnet/posts') Google +
+                  li
+                    a(href='https://www.facebook.com/jquery2dotnet') Facebook
+                  li.divider
+                  li
+                    a(href='#') Github
+              a.btn.btn-danger(href="#/delete/{{user[0].username}}") Delete
+
+                    

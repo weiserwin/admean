@@ -1,0 +1,7 @@
+To launch the web app
+
+1) npm install
+
+2) npm start
+
+3) go to https://localhost:4430
