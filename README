@@ -5,3 +5,25 @@ To launch the web app
 2) npm start
 
 3) go to https://localhost:4430
+
+
+
+User management app
+  Simple user management web app making use of the MEAN stack and jade templates. 
+  Data is accessed through an API available at /api/...
+          GET /api/users <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> list users
+      POST /api/users <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> add users
+      GET /api/user/:name <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> user info (where :name is the unique username) (REQUIRES AUTH)
+      DELETE /api/user/:name <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> delete user (where :name is the unique username) (REQUIRE AUTH)
+      POST /api/auth <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> authenticate
+  The app tries to access a mongo database located at localhost:27017. If you want to change this, modify <b> mongo/connect.js. </b>
+
+
+
+Rules
+  Everybody can view the current list of users.
+  Everybody can add new users (name + email).
+  The admin can log in the site to see user details and delete user. Admin account is created when the server starts
+          Username is "admin"
+      Password is "admin"
+  Authentication is handled with a jsonwebtoken stored in local storage and given to the API in the authorization header. Token are valid for 24 hours.
